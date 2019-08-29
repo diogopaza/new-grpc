@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package proto;
+
+message RequisicaoPessoa{
+
+    string nome = 1;
+    
+}
+
+message RetornoPessoa{
+
+    string nomeResultado = 1;
+}
+
+service AddServicePessoa{
+
+    rpc verNome(RequisicaoPessoa) returns(RetornoPessoa);
+    
+}
