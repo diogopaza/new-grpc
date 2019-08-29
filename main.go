@@ -19,6 +19,7 @@ func main() {
 	srv := grpc.NewServer()
 	//pb.RegisterAddServiceServer(srv, &server{})
 	pb.RegisterAddServicePessoaServer(srv, &pb.Server{})
+	pb.RegisterAddServiceClienteServer(srv, &pb.Server{})
 	reflection.Register(srv)
 
 	if e := srv.Serve(listener); e != nil {
