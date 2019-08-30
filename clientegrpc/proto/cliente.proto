@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package proto;
+
+message RequisicaoCliente{
+
+    int64  id =1;
+    string nome = 2;
+    
+}
+
+message RetornoCliente{
+
+    int64  idResultado =1;
+    string nomeResultado = 2;
+}
+
+service AddServiceCliente{
+
+    rpc verCliente(RequisicaoCliente) returns(RetornoCliente);
+    
+}
