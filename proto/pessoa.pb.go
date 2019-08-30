@@ -12,6 +12,8 @@ import (
 	grpc "google.golang.org/grpc"
 )
 
+type Server struct{}
+
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto1.Marshal
 var _ = fmt.Errorf
